@@ -15,6 +15,9 @@ class Size(models.Model):
         return self.name
 
 class Product(models.Model):
+     
+
+    
     product_name = models.CharField(max_length=200)
     category = models.ForeignKey(
         'Category',
