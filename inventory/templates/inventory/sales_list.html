@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>💰 Sales History</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Date</th>
+        <th>Store</th>
+        <th>Product</th>
+        <th>Variant</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+    </tr>
+
+    {% for item in sales %}
+    <tr>
+
+        <td>{{ item.sale.created_at }}</td>
+
+        <td>{{ item.sale.store.name }}</td>
+
+        <td>{{ item.variant.product.product_name }}</td>
+
+        <td>
+            {{ item.variant.size }}
+            -
+            {{ item.variant.color }}
+        </td>
+
+        <td>{{ item.quantity }}</td>
+
+        <td>{{ item.price }}</td>
+
+        <td>{{ item.subtotal }}</td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

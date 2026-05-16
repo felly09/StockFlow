@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Google Login</title>
+
+    <link rel="stylesheet" href="{% static 'accounts/auth.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>StockFlow</h1>
+
+        <p>
+            Continue with your Google account
+        </p>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <button type="submit">
+                Continue with Google
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

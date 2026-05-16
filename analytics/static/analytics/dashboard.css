@@ -1,0 +1,210 @@
+/* ===============================
+   ROOT VARIABLES
+================================= */
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --border: #334155;
+    --shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ===============================
+   RESET
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY (IMPORTANT: NO CONFLICTS)
+================================= */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===============================
+   DASHBOARD WRAPPER
+================================= */
+.dashboard {
+    padding: 20px;
+}
+
+/* ===============================
+   HEADER
+================================= */
+.heading {
+    text-align: center;
+    padding: 20px;
+}
+
+.heading h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.heading p {
+    color: var(--muted);
+}
+
+/* ===============================
+   GRID SYSTEM
+================================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+/* ===============================
+   CARD
+================================= */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.card h2 {
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* ===============================
+   VALUE TEXT
+================================= */
+.value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ===============================
+   SUMMARY (SAFE CLEAN VERSION)
+================================= */
+.summary-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.summary-item {
+    background: #111827;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.summary-item .label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.summary-item .count {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ===============================
+   NOTIFICATIONS
+================================= */
+.notification-list {
+    list-style: none;
+}
+
+.notification-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.notification-item.info {
+    background: #1e293b;
+}
+
+.notification-item.warning {
+    background: #3a2f00;
+    color: #facc15;
+}
+
+.notification-item.danger {
+    background: #3b0a0a;
+    color: #f87171;
+}
+
+.message {
+    font-size: 14px;
+}
+
+.date {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* ===============================
+   TABLE
+================================= */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+.table th {
+    color: var(--muted);
+}
+
+/* ===============================
+   BUTTONS (DASHBOARD ACTIONS ONLY)
+================================= */
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: var(--accent);
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    margin: 4px;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-list {
+        grid-template-columns: 1fr;
+    }
+}

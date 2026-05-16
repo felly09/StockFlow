@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+
+{% block title %}Sell Product{% endblock %}
+
+{% block content %}
+
+<div class="form-container">
+
+    <h2>💰 Sell Product</h2>
+
+    <div class="card">
+
+        <p>
+            <strong>Product:</strong>
+            {{ variant.product.product_name }}
+        </p>
+
+        <p>
+            <strong>Variant:</strong>
+            {{ variant.size }} - {{ variant.color }}
+        </p>
+
+        <p>
+            <strong>Price:</strong>
+            {{ variant.price }}
+        </p>
+
+        <p>
+            <strong>Stock Available:</strong>
+            {{ variant.stock.quantity }}
+        </p>
+
+    </div>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label>Quantity</label>
+
+        <input
+            type="number"
+            name="quantity"
+            min="1"
+            required
+        >
+
+        <button type="submit" class="btn">
+            Complete Sale
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

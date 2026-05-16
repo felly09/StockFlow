@@ -1,0 +1,71 @@
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #334155;
+    color: white;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+    padding: 10px 18px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #27ae60;
+}
+
+/* BACK LINK */
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+
+.btn-edit {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-edit:hover {
+    background-color: #2980b9;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+

@@ -1,0 +1,145 @@
+/* =========================
+   PRODUCT PAGE CARD
+========================= */
+
+.card {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+    overflow-x: auto;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111827;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* TABLE HEADERS */
+
+.table th {
+    background: #374151;
+    padding: 14px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #4b5563;
+}
+
+/* TABLE DATA */
+
+.table td {
+    padding: 14px;
+    border-bottom: 1px solid #2d3748;
+    text-align: center;
+    vertical-align: middle;
+    word-break: break-word;
+    color: #f3f4f6;
+}
+
+/* ROW HOVER EFFECT */
+
+.table tr:hover {
+    background: #1e293b;
+}
+
+/* BETTER COLUMN WIDTH */
+
+.product-table th,
+.product-table td {
+    min-width: 130px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    background: #16a34a;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    margin: 2px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #15803d;
+}
+
+/* EDIT BUTTON */
+
+.btn-edit {
+    background: #2563eb;
+    padding: 7px 12px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    margin: 2px;
+    transition: 0.3s;
+}
+
+.btn-edit:hover {
+    background: #1d4ed8;
+}
+
+/* DELETE BUTTON */
+
+.btn-delete {
+    background: #dc2626;
+    padding: 7px 12px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    margin: 2px;
+    transition: 0.3s;
+}
+
+.btn-delete:hover {
+    background: #b91c1c;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   RESPONSIVE TABLE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .table th,
+    .table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .btn,
+    .btn-edit,
+    .btn-delete {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}

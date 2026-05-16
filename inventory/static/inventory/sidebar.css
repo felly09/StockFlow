@@ -1,0 +1,128 @@
+/* ===============================
+   SIDEBAR CONTAINER
+================================= */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+
+    background: linear-gradient(180deg, #0b1220, #0f172a);
+    border-right: 1px solid #1f2937;
+
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+/* ===============================
+   LOGO
+================================= */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #38bdf8;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.logo span {
+    color: white;
+}
+
+/* ===============================
+   MENU
+================================= */
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===============================
+   LINKS
+================================= */
+.menu a {
+    text-decoration: none;
+    color: #cbd5e1;
+
+    padding: 10px 12px;
+    border-radius: 10px;
+
+    margin-bottom: 6px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.menu a:hover {
+    background: #1e293b;
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* ACTIVE LINK */
+.menu a.active {
+    background: #38bdf8;
+    color: #0b1220;
+    font-weight: bold;
+}
+
+/* ===============================
+   SECTION TITLE
+================================= */
+.section-title {
+    margin: 12px 0 6px;
+    font-size: 11px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===============================
+   DIVIDER
+================================= */
+.divider {
+    height: 1px;
+    background: #1f2937;
+    margin: 12px 0;
+}
+
+/* ===============================
+   SCROLLBAR
+================================= */
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 10px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}

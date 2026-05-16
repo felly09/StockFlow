@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<header class="heading">
+    <h1>StockFlow Dashboard</h1>
+    <p>Real-time business overview of your inventory system</p>
+</header>
+
+<section class="grid">
+
+    <!-- TOP PRODUCT -->
+    <article class="card">
+        <h2>📈 Top Selling Product</h2>
+        <p>
+            {% if top_product %}
+                {{ top_product.variant__product__product_name }}
+            {% else %}
+                No sales data available
+            {% endif %}
+        </p>
+    </article>
+
+    <!-- ACTIVE STORE -->
+    <article class="card">
+        <h2>🏬 Most Active Store</h2>
+        <p>
+            {% if active_store %}
+                {{ active_store.name }}
+            {% else %}
+                No activity data available
+            {% endif %}
+        </p>
+    </article>
+
+    <!-- SUMMARY -->
+    <article class="card">
+        <h2>📊 Summary</h2>
+
+        <p>📦 Total Units Sold: {{ summary.total_units_sold }}</p>
+        <p>📥 Total Stock In: {{ summary.total_stock_in }}</p>
+        <p>🔁 Total Transferred: {{ summary.total_transferred }}</p>
+
+    </article>
+
+    <!-- NOTIFICATIONS -->
+    <article class="card">
+        <h2>🔔 Notifications</h2>
+
+        {% if notifications %}
+            {% for note in notifications %}
+                <p>
+                    {{ note.message }}
+                    <small>({{ note.created_at|date:"M d, Y H:i" }})</small>
+                </p>
+            {% endfor %}
+        {% else %}
+            <p>No alerts yet</p>
+        {% endif %}
+
+    </article>
+
+    <!-- STOCK TABLE -->
+    <article class="card">
+        <h2>📦 Stock Per Size</h2>
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Size</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for stock in stock_items %}
+                <tr>
+                    <td>{{ stock.variant.product.product_name }}</td>
+                    <td>{{ stock.variant.size.name }}</td>
+                    <td>{{ stock.quantity }}</td>
+                    <td>
+                        <a href="{% url 'sell_product' stock.variant.id %}" class="btn">
+                            💸 Sell
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </article>
+
+</section>
+
+{% endblock %}

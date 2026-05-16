@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>📦 Products</h2>
+
+    <table class="table product-table">
+
+        <thead>
+
+            <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Variant</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for product in products %}
+
+                {% for variant in product.variants.all %}
+
+                <tr>
+
+                    <!-- PRODUCT -->
+                    <td>
+                        {{ product.product_name }}
+                    </td>
+
+                    <!-- CATEGORY -->
+                    <td>
+                        {{ product.category.name }}
+                    </td>
+
+                    <!-- VARIANT -->
+                    <td>
+                        {{ variant.size }}
+                        -
+                        {{ variant.color }}
+                    </td>
+
+                    <!-- PRICE -->
+                    <td>
+                        {{ variant.price }}
+                    </td>
+
+                    <!-- STOCK -->
+                    <td>
+                        {{ stock_map|get_item:variant.id|default:"0" }}
+                    </td>
+
+                    <!-- ACTIONS -->
+                    <td>
+
+                        <a href="{% url 'sell_product'  variant.id %}" class="btn">
+
+                            💰 Sell
+
+                        </a>
+
+                        <a href="{% url 'edit_variant' variant.id %}"
+                           class="btn-edit">
+
+                            ✏
+
+                        </a>
+
+                        <a href="{% url 'delete_variant' variant.id %}"
+                           class="btn-delete">
+
+                            🗑
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+<div class="sidebar">
+
+    <div class="logo">
+        📦 <span>StockFlow</span>
+    </div>
+
+    <nav class="menu">
+
+        <a href="{% url 'dashboard' %}" class="active">🏠 Dashboard</a>
+
+        <div class="divider"></div>
+        <p class="section-title">SETUP</p>
+
+        <a href="{% url 'category_list' %}">📂 Categories</a>
+        <a href="{% url 'size_list' %}">📏 Sizes</a>
+        <a href="{% url 'store_list' %}">🏢 Stores</a>
+
+        <div class="divider"></div>
+        <p class="section-title">PRODUCTS</p>
+
+        <a href="{% url 'product_list' %}">📦 View Products</a>
+        <a href="{% url 'add_product' %}">➕ Add Product</a>
+        <a href="{% url 'add_variant' %}">🎨 Add Variant</a>
+
+        <div class="divider"></div>
+        <p class="section-title">STOCK</p>
+
+        <a href="{% url 'add_stock_in' %}">📥 Add Stock</a>
+
+        <div class="divider"></div>
+        <p class="section-title">SALES</p>
+
+        <a href="{% url 'product_list' %}" class="sell-highlight">📤 Sell Products</a>
+        <a href="{% url 'sales_list' %}">💰 Sales</a>
+
+        <div class="divider"></div>
+        <p class="section-title">EXPENSES</p>
+
+        <a href="{% url 'expense_list' %}">📊 Expenses</a>
+        <a href="{% url 'add_expense' %}">➕ Add Expense</a>
+
+        <div class="divider"></div>
+
+        <!-- ACCOUNT -->
+        <a href="{% url 'logout' %}" style="color: #ff4d4d;">🚪 Logout</a>
+
+    </nav>
+
+</div>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Product{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>➕ Add Product</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="btn-primary">Save Product</button>
+    </form>
+
+    <a href="{% url 'product_list' %}" class="back-link">
+        📦 View Products
+    </a>
+</div>
+{% endblock %}
