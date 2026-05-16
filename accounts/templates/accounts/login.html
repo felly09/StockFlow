@@ -1,0 +1,44 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'accounts/auth.css' %}">
+
+<div class="auth-container">
+
+    <h1>📦 StockFlow</h1>
+    <h2>Login to StockFlow</h2>
+
+    <!-- ERROR MESSAGES -->
+    {% if messages %}
+        {% for message in messages %}
+            <p class="error-message">
+                {{ message }}
+            </p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="text"
+               name="username"
+               placeholder="Username"
+               required>
+
+        <input type="password"
+               name="password"
+               placeholder="Password"
+               required>
+
+        <button type="submit">
+            Login
+        </button>
+        <a href="/accounts/google/login/" class="google-btn">Continue with Google</a>
+    </form>
+
+    <p>
+        Don't have account?
+        <a href="{% url 'signup' %}">
+            Sign Up
+        </a>
+    </p>
+
+</div>

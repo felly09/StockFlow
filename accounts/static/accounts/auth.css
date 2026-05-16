@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* MAIN CARD */
+.auth-container {
+    width: 380px;
+    padding: 30px;
+
+    background: rgba(30, 41, 59, 0.95);
+    border-radius: 16px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+
+    backdrop-filter: blur(10px);
+
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* BRAND TITLE */
+.auth-container h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #38bdf8;
+    margin-bottom: 5px;
+}
+
+.auth-container h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #e2e8f0;
+}
+
+/* INPUT FIELDS */
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    background: #0f172a;
+    color: white;
+
+    outline: none;
+    transition: 0.2s;
+}
+
+.auth-container input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+/* BUTTON */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+
+    background: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* LINKS */
+.auth-container p {
+    text-align: center;
+    margin-top: 15px;
+    color: #cbd5e1;
+}
+
+.auth-container a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-message{
+    background: #7f1d1d;
+    color: #fecaca;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.google-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    margin-top:15px;
+    padding:12px;
+    background:white;
+    color:black;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.google-btn:hover{
+    background:#e5e5e5;
+}
+
+/* GOOGLE LOGIN PAGE */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f8fafc;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+}
+
+.container{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.card{
+    background:#ffffff;
+
+    width:100%;
+    max-width:420px;
+
+    padding:50px 40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 35px rgba(15,23,42,0.08);
+
+    border:1px solid #e2e8f0;
+
+    animation:fadeIn 0.5s ease;
+}
+
+.card h1{
+    color:#0f172a;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+    letter-spacing:-1px;
+}
+
+.card p{
+    color:#64748b;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    margin-bottom:35px;
+}
+
+button{
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all 0.3s ease;
+}
+
+button:hover{
+    background:#2563eb;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,0.2);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
