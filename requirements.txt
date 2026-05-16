@@ -3,3 +3,4 @@ gunicorn
 django-allauth
 requests
 PyJWT
+cryptography
